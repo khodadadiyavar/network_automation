@@ -37,9 +37,10 @@ for line in f:
 
     #remote_connection.send("ls -h /etc/cron.d/ | cat > list.txt && cat list.txt\n")
     sleep(0.5)
+    #IF YOU NEED TO SWITCH TO ROOT USER USE BELOW LINES
     remote_connection.send("sudo su\n")
     sleep(0.1)
-    remote_connection.send("T0p53CUr!ty\n")
+    remote_connection.send("PASSWORD\n")
     sleep(0.5)
     remote_connection.send("echo '#!/bin/bash' > script.sh\n")
     remote_connection.send("echo 'echo \"###########HOSTNAME IS:#############\"' >> script.sh\n")
@@ -56,9 +57,10 @@ for line in f:
     sleep(0.1)
     remote_connection.send("cat cron-files.txt\n")
     remote_connection.send("mkdir /mnt/smb\n")
-    remote_connection.send("mount //10.254.2.30/cronfiles/ /mnt/smb -o user=y.khodadadi \n")
+    remote_connection.send("mount //WINDOWS FILE SHARE/PATH /mnt/smb -o user=YOUR USERNAME \n")
     sleep(0.1)
-    remote_connection.send("T0p53CUr!ty\n")
+    #SEND THE PASSWORD OF WINDOWS SHARE USING BELOW LINE
+    remote_connection.send("PASSWORD OF WINDOWS SHARE\n")
     sleep(0.2)
     remote_connection.send("cp cron-files.txt/mnt/smb/$HOSTNAME-Cron-Summary.txt\n")
     sleep(0.1)
