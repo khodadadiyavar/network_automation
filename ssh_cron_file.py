@@ -3,11 +3,15 @@ import getpass
 from time import sleep
 
 username = raw_input("Enter your username: ")
-#password = "T0p53CUr!ty"
+#Remove below sharp sign to hard code your password
+#password = "YOUR PASSWORD HERE"
+#use below line to ask for password and echo it to user
 #password = raw_input("Enter your password: ")
+#use below line to ask for password without echoing it to user
 password = getpass.getpass("Enter your password: ")
 
 ###########define servers
+#use a text file containing your IP addresses (one IP per line)
 f = open('.\\IP_List.txt')
 
 for line in f:
